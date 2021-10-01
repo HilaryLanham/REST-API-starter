@@ -18,12 +18,6 @@ describe('GET requests', () => {
 });
 
 // TEST THE REST API ENDPOINT FOR POST
-//describe('CREATE request', () => {
-    
-    // test('CREATE product test', async () => {
-    //     const res = await request(app).post('/product/create')
-    //     expect(res.statusCode).toBe(201);
-    // });
 
     describe('CREATE request', () => {
     
@@ -41,16 +35,10 @@ describe('GET requests', () => {
     
     });
 
+//Unit test - to check whether the product builder displays the three object components of name, description and price (in this case a number (42))   
 
-    // UNIT TEST THE PRODUCT BUILDER
-describe('Unit Tests', () => {​​​
-letobj = {​​​
-name:"name",
-description:"desc",
-price:15.99
-    }​​​;
-test('product object builder', () => {​​​
-// TEST IN HERE
-expect(productBuilder("name", "desc", 25.99)).toEqual(obj);
-    }​​​);
-}​​​);
+//describe('Unit Tests', () => {
+
+    test('product object builder', () => {
+        expect(build('a name', 'a description', 42)).toMatchObject({'name' : 'a name', 'description' : 'a description', price : 42});
+    });
