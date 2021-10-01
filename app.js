@@ -160,3 +160,7 @@ app.delete('/product/delete/:id', (req,res) => {
 });
 
 module.exports = {app, productBuilder};
+
+
+
+console.log = "Change"
